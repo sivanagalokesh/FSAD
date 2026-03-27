@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sync Engine – Dashboard</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div id="app">
+
+    <!-- SIDEBAR NAV -->
+    <nav class="sidebar-nav" id="sideNav">
+      <div class="nav-logo">
+        <div class="logo-ring">⟳</div>
+        <div>
+          <div class="nav-title">SYNC ENGINE</div>
+          <div class="nav-sub">v2.0 · DISTRIBUTED</div>
+        </div>
+      </div>
+      <ul class="nav-links">
+        <li class="nav-item active" data-page="dashboard">
+          <span class="nav-icon">⬡</span> Dashboard
+        </li>
+        <li class="nav-item" data-page="nodes">
+          <span class="nav-icon">◎</span> Nodes
+        </li>
+        <li class="nav-item" data-page="database">
+          <span class="nav-icon">⊞</span> Database
+        </li>
+        <li class="nav-item" data-page="events">
+          <span class="nav-icon">≡</span> Event Log
+        </li>
+        <li class="nav-item" data-page="query">
+          <span class="nav-icon">⌨</span> Query Lab
+        </li>
+        <li class="nav-item" data-page="conflicts">
+          <span class="nav-icon">⚠</span> Conflicts
+        </li>
+        <li class="nav-item" data-page="chat" style="margin-top:8px;border-top:1px solid var(--border);padding-top:12px">
+          <span class="nav-icon">💬</span> Live Chat
+          <span class="nav-badge" id="chatNavBadge" style="display:none"></span>
+        </li>
+      </ul>
+      <div class="nav-footer">
+        <div class="engine-badge" id="engineBadge">
+          <span class="dot"></span> ENGINE LIVE
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content" id="mainContent">
+      <!-- pages are injected here by router.js -->
+    </main>
+
+  </div>
+
+  <!-- Scripts (order matters) -->
+  <script src="js/state.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/topology.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/livechat.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
